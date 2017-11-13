@@ -1,0 +1,7 @@
+{% set slinga = {
+	'socket': '127.0.0.1:2001',
+	'paths': {
+		'root': '/srv/slinga',
+	}
+} %}
+{% do slinga.update(salt.pillar.get('slinga:lookup')) %}

@@ -1,0 +1,11 @@
+[uwsgi]
+master = True
+processes = 1
+chdir = {{ slinga.paths.root }}
+pythonpath = {{ slinga.paths.root }}
+wsgi-file = slinga.py
+callable = app
+virtualenv = {{ slinga.paths.root }}
+http-socket = {{ slinga.socket }}
+plugin = python3
+plugin = http
